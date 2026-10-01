@@ -216,7 +216,7 @@ function Results({ state }: { state: TripState }) {
       )}
 
       {(itinerary || research.destination) && (
-        <Tabs defaultValue={itinerary ? "itinerary" : "discover"}>
+        <Tabs key={itinerary ? "i" : "d"} defaultValue={itinerary ? "itinerary" : "discover"}>
           <TabsList className="no-print flex-wrap">
             {itinerary && <TabsTrigger value="itinerary">Itinerary</TabsTrigger>}
             <TabsTrigger value="discover">Discover</TabsTrigger>
